@@ -1,0 +1,1 @@
+{"version":3,"sources":["one.js","two.js"],"names":["console","log"],"mappings":"AAAAA,QAAQC,IAAK,6CCCbD,QAAQC,IAAI","file":"../js/main.js","sourcesContent":["console.log (\"Hej! denna sida har lett... till nummer 1\")","/*här är funktionen för js nr 2*/\r\nconsole.log(\"Halli hallå ifrån nummer 2\");"]}

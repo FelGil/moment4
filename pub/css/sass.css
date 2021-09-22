@@ -1,0 +1,89 @@
+/*variables*/
+/*if-statement*/
+/*mixin*/
+/*extend*/
+#image-one, #image-three, #image-two {
+  min-width: 25%;
+  max-width: 80%;
+}
+@media only screen and (max-width: 800px) {
+  #image-one, #image-three, #image-two {
+    min-width: 80%;
+  }
+}
+
+/*nesting*/
+nav ul {
+  margin: 0;
+  padding: 2%;
+  list-style: none;
+  background-color: #26b077;
+}
+nav li {
+  display: inline-block;
+}
+@media only screen and (max-width: 800px) {
+  nav li {
+    display: block;
+  }
+}
+nav a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+  color: white;
+  display: block;
+  padding: 1% 8%;
+  text-decoration: none;
+}
+@media only screen and (max-width: 800px) {
+  nav a {
+    font-size: 1.5em;
+  }
+}
+nav li a:hover {
+  background-color: #b4efd6;
+  color: black;
+}
+
+/*basic shit*/
+body {
+  background-color: #4bd89d;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  font-size: 1.8em;
+  text-align: center;
+  padding: 8%;
+}
+
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  padding-top: 8%;
+}
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+header {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+  color: white;
+  background-color: #b4efd6;
+  padding: 5%;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  header {
+    font-size: 1.5em;
+  }
+}

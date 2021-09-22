@@ -1,0 +1,109 @@
+/*variables*/
+$main-color: rgb(75, 216, 157);
+$lighter-main-color: lighten($main-color, 25%);
+$darker-main-color: darken($main-color, 15%);
+$headline-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$main-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+/*if-statement*/
+@mixin respond ($breakpoint) {
+
+   @if $breakpoint==smallerscreen {
+      @media only screen and (max-width: 800px) {
+      @content;
+   }
+ }
+
+}
+
+/*mixin*/
+@mixin headline {
+   font-family: $headline-font;
+   font-weight: bolder;
+   font-size: 2em;
+   @include respond(smallerscreen) {
+      font-size: 1.5em;
+   }
+   color: white;
+}
+
+@mixin texts {
+   font-family: $main-font;
+   color: white;
+   font-size: 1.8em;
+   text-align: center;
+   padding: 8%
+}
+
+/*extend*/
+#image-one {
+   min-width: 25%;
+   max-width: 80%;
+   @include respond(smallerscreen) {
+      min-width: 80%;
+   }
+}
+
+#image-two {
+   @extend #image-one;
+}
+
+
+#image-three {
+   @extend #image-one;
+}
+
+/*nesting*/
+nav {
+   ul{
+      margin: 0;
+      padding: 2%;
+      list-style: none;
+      background-color: $darker-main-color;
+   }
+
+   li {
+      display: inline-block;
+      @include respond(smallerscreen) {
+         display: block;
+      }
+   }
+
+   a{
+      @include headline;
+      display: block;
+      padding: 1% 8%;
+      text-decoration: none;
+   }
+
+   li a:hover {
+      background-color: $lighter-main-color;
+      color: black;
+   }
+}
+
+/*basic shit*/
+body {
+   background-color: $main-color;
+}
+
+p {
+   @include texts;
+}
+
+h2 {
+   @include headline;
+   text-align: center;
+   padding-top: 8%;
+}
+
+header {
+   @include headline;
+   background-color: $lighter-main-color;
+   padding: 5%;
+   text-align: center;
+}
+
+
+

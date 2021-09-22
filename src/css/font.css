@@ -1,0 +1,15 @@
+h1 {
+    color: rgb(61, 14, 75);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 5em;
+    text-align: center;
+}
+
+p {
+    color:rgb(30, 32, 31);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8em;
+    line-height: 1.3em;
+    text-align: center;
+}
